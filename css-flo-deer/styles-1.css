@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+}
+body.over {
+  overflow: auto;
+}
+
+.view-space {
+  text-align: center;
+  height: 100vh;
+}
+img {
+  height: 100%;
+}
+a {
+  color: red;
+}
+
+.flo-dear-all {
+  height: 95vh;
+}
+
+h1 {
+  position: absolute;
+  color: #424244;
+  right: 0;
+  margin-right: 0.7em;
+  transform: translateY(-100%);
+  animation: text-fall 1s 21.6s forwards;
+  z-index: 10;
+}
+
+h2 {
+  position: absolute;
+  color: #424244;
+  right: 0;
+  margin-right: 0.7em;
+  margin-top: 2em;
+  transform: translateY(-100em);
+  animation: text-fall-2 1s 22.6s forwards;
+  z-index: 10;
+}
+
+h3 {
+  position: absolute;
+  color: #424244;
+  left: 0;
+  bottom: 0;
+  margin-left: 0.7em;
+  margin-bottom: 0.7em;
+  transform: translateY(20em);
+  animation: text-up 1s 23.6s forwards;
+  z-index: 10;
+}
+
+/* Carrots fall down */
+#c1 {
+  transform: translateY(-110%);
+  animation: fall 0.5s 2s forwards, shake 0.5s 2.5s forwards,
+    eat 1.5s 13.5s forwards, fall 0.5s 24s forwards;
+}
+#c2 {
+  transform: translateY(-110%);
+  animation: fall 0.2s 2.3s forwards, shake 0.5s 2.5s forwards,
+    eat 1.5s 14s forwards, fall 0.2s 24.3s forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes eat {
+  from {
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+/* box wobbles */
+#box {
+  animation: shake 0.5s 2.5s forwards;
+}
+
+@keyframes text-fall {
+  from {
+    transform: translateY(-40%);
+  }
+  to {
+    transform: translateY(35px);
+  }
+}
+
+/* dear walks in */
+#dear {
+  transform-origin: left;
+  transform-box: fill-box;
+  transform: translateX(70em);
+  animation: walk-in 4s 3s forwards;
+}
+
+@keyframes walk-in {
+  from {
+    transform: translateX(70em);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#l1 {
+  animation: leg-move 0.25s 3s forwards 16;
+}
+#l2 {
+  animation: leg-move 0.25s 3.2s forwards 16;
+}
+
+#l3 {
+  animation: leg-move 0.25s 3s forwards 16;
+}
+
+#l4 {
+  animation: leg-move 0.25s 3.2s forwards 16;
+}
+
+@keyframes leg-move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2em);
+  }
+}
+
+/* tail twitch */
+#tail {
+  animation: twitch 0.25s 8s 6 forwards, twitch 0.25s 26s infinite;
+}
+
+@keyframes twitch {
+  from {
+    transform: translateY(1em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#head-neck {
+  transform-origin: center;
+  animation: head-move 3s 10s forwards, head-move 1s 15.5s reverse forwards,
+    shake 1s 17s 3 forwards;
+}
+
+@keyframes head-move {
+  from {
+    transform: translate(0, 0) rotate(0);
+  }
+  to {
+    transform: translate(-1.2em, 5.6em) rotate(-69deg);
+  }
+}
+
+#body-tail {
+  transform-origin: center;
+  animation: bend-down 3s 10s forwards, bend-down 1s 15.5s reverse forwards;
+}
+@keyframes bend-down {
+  from {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  to {
+    transform: translateY(3em) translateX(-0.5em) scale(1.05);
+  }
+}
+
+#mouth {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: zoom 0.3s 13s 8 forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 
+#legs
+
+#body-tail
+  #body
+  #tail
+
+#head-neck
+  #head
+    #all-face
+      #face
+      #eye-1
+      #eye-2
+      #nose
+      #mouth
+
+  #antler-1
+  #antler-2
+
+*/
+
+#crown {
+  transform: translateY(-110%);
+  animation: fall 0.5s 19s forwards;
+}
+
+#letter {
+  transform: translateY(-60%);
+  animation: fall 0.5s 20s forwards;
+}
+
+#feather {
+  transform: translateY(-60%);
+  animation: fall 0.5s 20.5s forwards;
+}
+
+@keyframes text-fall-2 {
+  from {
+    transform: translateY(-40em);
+  }
+  to {
+    transform: translateY(35px);
+  }
+}
+
+@keyframes text-up {
+  from {
+    transform: translateY(20em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes rote {
+  0% {
+    transform: rotate(0deg) scale(0.7);
+  }
+  15% {
+    transform: rotate(90deg) scale(0.7);
+  }
+  30% {
+    transform: rotate(180deg) scale(0.7);
+  }
+  90% {
+    transform: rotate(180deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
